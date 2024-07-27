@@ -41,7 +41,7 @@ function nextLevel() {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   gameSequence.push(randomColor);
   showMessage("Watch the sequence...");
-  setTimeout(playSequence, 2500); // Delay sequence start by 2.5 seconds
+  setTimeout(playSequence, 3500); // Delay sequence start by 3.5 seconds
 }
 
 function playSequence() {

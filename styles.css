@@ -34,7 +34,7 @@ body, html {
 .color-button[data-color="green"] { background-color: #77dd77; }
 .color-button[data-color="red"] { background-color: #ff6961; }
 .color-button[data-color="yellow"] { background-color: #fdfd96; }
-.color-button[data-color="blue"] { background-color: #0450ac; }
+.color-button[data-color="blue"] { background-color: #000000; }
 
 .color-button.active {
   transform: scale(1.1);
