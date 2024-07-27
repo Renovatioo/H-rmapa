@@ -1,0 +1,71 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  /* Updated background gradient to be more neutral */
+  background: radial-gradient(circle, rgb(82, 55, 182) 0%, rgb(17, 144, 202) 100%);
+  display: flex;
+  flex-direction: column; /* Aligns children (game grid and start button) vertically */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);  /* Increased size of columns */
+  grid-template-rows: repeat(2, 200px);    /* Increased size of rows */
+  gap: 30px;  /* Increased gap for better spacing */
+  margin-bottom: 20px;  /* Increased margin to separate from start button */
+}
+
+.color-button {
+  width: 200px;  /* Increased width */
+  height: 200px;  /* Increased height */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;  /* Ensure full opacity for clarity */
+}
+
+.color-button[data-color="green"] { background-color: #77dd77; }
+.color-button[data-color="red"] { background-color: #ff6961; }
+.color-button[data-color="yellow"] { background-color: #fdfd96; }
+.color-button[data-color="blue"] { background-color: #0450ac; }
+
+.color-button.active {
+  transform: scale(1.1);
+  opacity: 1; /* Ensure active state is clearly visible */
+}
+
+#start {
+  padding: 10px 30px;  /* Slightly bigger padding for better visibility */
+  font-size: 18px;  /* Increased font size */
+  border: none;
+  background-color: #f77f00;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 20px; /* Added margin to separate from score panel */
+}
+
+#score-panel {
+  font-size: 20px;
+  color: white;
+  margin: 20px;
+}
+
+/* Enhanced Shape Specific Styles for better clarity */
+.color-button[data-shape="triangle"] {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.color-button[data-shape="square"] {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.color-button[data-shape="circle"] {
+  border-radius: 50%;
+}
+
+.color-button[data-shape="star"] {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
