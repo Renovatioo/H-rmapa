@@ -25,6 +25,12 @@ body, html {
   opacity: 1;  /* Ensure full opacity for clarity */
 }
 
+.color-button.highlight {
+  opacity: 1; /* Full opacity makes the color brighter */
+  transform: scale(1.1); /* Slightly enlarge when active for better visibility */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for effect */
+}
+
 .color-button[data-color="green"] { background-color: #77dd77; }
 .color-button[data-color="red"] { background-color: #ff6961; }
 .color-button[data-color="yellow"] { background-color: #fdfd96; }
@@ -45,6 +51,13 @@ body, html {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   margin-top: 20px; /* Added margin to separate from score panel */
+}
+
+#message-panel {
+  font-size: 30px;
+  color: white;
+  margin: 10px;
+  visibility: hidden;  /* Hide by default */
 }
 
 #score-panel {
